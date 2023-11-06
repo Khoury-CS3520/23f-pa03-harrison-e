@@ -51,7 +51,8 @@ jobs:
         # in this command.
         run: |
           ./$EXE_NAME $GITHUB_WORKSPACE/sampleImages/blern.jpg $GITHUB_WORKSPACE/sampleImages/sampleTiles $GITHUB_WORKSPACE/sampleImages/blernMosaic
-          ls $GITHUB_WORKSPACE/sampleImages/
+          echo " "
+          ls -l $GITHUB_WORKSPACE/
 
       - name: Copy output files to artifact directory
         working-directory: ${{runner.workspace}}/build
