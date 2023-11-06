@@ -53,7 +53,7 @@ jobs:
           chmod 777 $GITHUB_WORKSPACE/sampleImages/
           ./$EXE_NAME $GITHUB_WORKSPACE/sampleImages/blern.jpg $GITHUB_WORKSPACE/sampleImages/sampleTiles $GITHUB_WORKSPACE/sampleImages/blernMosaic
           echo " "
-          ls -l $GITHUB_WORKSPACE/
+          ls -a $GITHUB_WORKSPACE/sampleImages
 
       - name: Copy output files to artifact directory
         working-directory: ${{runner.workspace}}/build
