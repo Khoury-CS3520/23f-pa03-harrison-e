@@ -57,6 +57,7 @@ jobs:
         # in the for loop below.
         run: |
           mkdir artifacts
+          ls $GITHUB_WORKSPACE/sampleImages/
           for f in $GITHUB_WORKSPACE/sampleImages/*
           do
             echo "  Copying $f"
