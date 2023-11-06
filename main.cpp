@@ -8,11 +8,11 @@ int main(int argc, char* argv[]) {
 
     if (argc == 4) {
         // 3-arg mode
-        cout << "Processing your photomosaic...";
+        cout << "Processing your photomosaic..." << endl;
         Photomosaic m = Photomosaic(string(argv[1]), string(argv[2]), 5, string(argv[3]));
         m.tile();
         m.writeOut(JPG);
-        cout << "Mosaic image written to: " << argv[3];
+        cout << "Mosaic image written to: " << argv[3] << endl;
         return 0;
 
     } else if (argc == 2 && strcmp(flag.c_str(), argv[1]) == 0) {
