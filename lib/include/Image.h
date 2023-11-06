@@ -75,9 +75,9 @@ public:
     // (old) constructor reads from ../sampleImages/filename w/ spec components, encodes with specified dimensions & # components
     Image(string filename, unsigned X, unsigned Y, channel_t encodedComponents, channel_t desiredComponents);
 
-    // write an image to ../sampleImages/filename, in specified format
+    // write an image to filepath, in specified format
     // NOTE this function adds an appropriate file extension to `filename`
-    void write(string filename, format_t format);
+    void write(string filepath, format_t format);
 
     /////////////////////////
     // conversion between uchar[] and pixel[][]

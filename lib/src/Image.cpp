@@ -100,8 +100,8 @@ Image::Image(string filepath) {
     }
 }
 
-void Image::write(string path, format_t format) {
-    outputFilepath = path;
+void Image::write(string filepath, format_t format) {
+    outputFilepath = filepath;
     int X = int(x);
     int Y = int(y);
     int N = int(componentsUsed);
