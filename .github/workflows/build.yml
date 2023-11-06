@@ -49,7 +49,9 @@ jobs:
         shell: bash
         # NOTE: You may need to update the path to your sample files
         # in this command.
-        run: ./$EXE_NAME $GITHUB_WORKSPACE/sampleImages/blern.jpg $GITHUB_WORKSPACE/sampleImages/sampleTiles $GITHUB_WORKSPACE/sampleImages/blernMosaic
+        run: |
+          ./$EXE_NAME $GITHUB_WORKSPACE/sampleImages/blern.jpg $GITHUB_WORKSPACE/sampleImages/sampleTiles $GITHUB_WORKSPACE/sampleImages/blernMosaic
+          ls $GITHUB_WORKSPACE/sampleImages/
 
       - name: Copy output files to artifact directory
         working-directory: ${{runner.workspace}}/build
@@ -57,7 +59,6 @@ jobs:
         # in the for loop below.
         run: |
           mkdir artifacts
-          touch $GITHUB_WORKSPACE/sampleImages/test.txt
           ls $GITHUB_WORKSPACE/sampleImages
           for f in $GITHUB_WORKSPACE/sampleImages/*
           do
