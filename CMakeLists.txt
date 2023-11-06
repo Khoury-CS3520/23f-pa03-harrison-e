@@ -11,8 +11,16 @@ set(CMAKE_CXX_FLAGS "-Wno-deprecated")
 
 # create a statically linked library named libimgLib
 add_library(imgLib
-        lib/include/sampleClass.h
-        lib/src/sampleClass.cpp)
+        lib/include/Image.h
+        lib/src/Image.cpp
+        lib/include/PixelVector.h
+        lib/src/PixelVector.cpp
+        lib/include/Pixel.h
+        lib/src/Pixel.cpp
+        lib/include/AVLTree.h
+        lib/include/Photomosaic.h
+        lib/src/Photomosaic.cpp
+)
 target_include_directories(imgLib PRIVATE lib/include lib/stb)
 
 # create the executable and use libimgLib created above
