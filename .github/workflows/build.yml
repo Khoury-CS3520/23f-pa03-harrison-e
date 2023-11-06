@@ -50,9 +50,9 @@ jobs:
         # NOTE: You may need to update the path to your sample files
         # in this command.
         run: |
+          chmod 777 $GITHUB_WORKSPACE/sampleImages/
           ./$EXE_NAME $GITHUB_WORKSPACE/sampleImages/blern.jpg $GITHUB_WORKSPACE/sampleImages/sampleTiles $GITHUB_WORKSPACE/sampleImages/blernMosaic
           echo " "
-          chmod 777 $GITHUB_WORKSPACE/sampleImages/
           ls -l $GITHUB_WORKSPACE/
 
       - name: Copy output files to artifact directory
